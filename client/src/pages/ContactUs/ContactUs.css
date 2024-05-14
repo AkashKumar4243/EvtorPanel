@@ -1,0 +1,74 @@
+.contact-us {
+    padding: 20px;
+    color: #FFFFFF;
+  }
+  
+  .contact-us h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00E676; /* Green color for the title */
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .contact-form {
+    background-color: #004D40; /* Dark green background */
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px;
+    border: 1px solid #00E676; /* Green border */
+    border-radius: 5px;
+    background-color: #00332B; /* Darker green background */
+    color: #FFFFFF; /* White text */
+  }
+  
+  .contact-form button {
+    padding: 10px;
+    background-color: #00E676; /* Green button */
+    color: #004D40; /* Dark green text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .address {
+    background-color: #004D40; /* Dark green background */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .address h2 {
+    font-size: 18px;
+    color: #00E676; /* Green color for headings */
+    margin-bottom: 5px;
+  }
+  
+  .address p {
+    font-size: 14px;
+    color: #FFFFFF; /* White text */
+    margin: 0;
+  }
+  

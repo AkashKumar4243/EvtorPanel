@@ -1,0 +1,35 @@
+.app {
+    display: flex;
+    background-color :#004d40 ;
+  }
+  
+  .sidebar {
+    width: 10vw;
+    height: 96vh;
+    background-color: #01241e;
+    color: white;
+    padding: 20px;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+    cursor: pointer;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  

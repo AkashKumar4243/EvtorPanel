@@ -1,0 +1,62 @@
+.chargers {
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.chargers h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00E676; /* Green color for the title */
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.charger-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.charger-card {
+  background-color: #004D40; /* Dark green background */
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.charger-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.charger-details h2 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #FFFFFF;
+}
+
+.charger-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.charger-rating span {
+  font-size: 16px;
+  color: #FFD700; /* Gold color for rating */
+}
+
+.charger-details p {
+  font-size: 14px;
+  color: #FFFFFF;
+  margin: 0;
+}

@@ -1,0 +1,90 @@
+.buy-products {
+    padding: 20px;
+    color: #FFFFFF;
+  }
+  
+  .buy-products h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00E676; /* Green color for the title */
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters input[type="text"], 
+  .filters input[type="date"], 
+  .filters select, 
+  .filters button {
+    padding: 10px;
+    border: 1px solid #004D40; /* Dark green border */
+    border-radius: 5px;
+    background-color: #004D40; /* Dark green background */
+    color: #FFFFFF; /* White text */
+  }
+  
+  .filters button {
+    background-color: #00E676; /* Green button */
+    color: #004D40; /* Dark green text */
+    border: none;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #004D40; /* Dark green background */
+    color: white;
+  }
+  
+  thead th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #004D40; /* Dark green border */
+  }
+  
+  tbody td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody tr:hover {
+    background-color: #004D40; /* Dark green background on hover */
+  }
+  
+  .product-image {
+    width: 50px;
+    height: auto;
+  }
+  
+  .details-button, .invoice-button {
+    padding: 5px 10px;
+    background-color: #00E676; /* Green button */
+    color: #004D40; /* Dark green text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .details-button i, .invoice-button i {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+  

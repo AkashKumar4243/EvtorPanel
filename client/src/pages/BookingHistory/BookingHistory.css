@@ -1,0 +1,96 @@
+.booking-history {
+  padding: 20px;
+  color: #FFFFFF;
+}
+
+.booking-history h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #00E676;
+}
+
+.breadcrumb {
+  font-size: 14px;
+  color: #999;
+  margin-bottom: 20px;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters input[type="text"], 
+.filters input[type="date"], 
+.filters select, 
+.filters button {
+  padding: 10px;
+  border: 1px solid #004D40;
+  border-radius: 5px;
+  background-color: #004D40;
+  color: #FFFFFF;
+}
+
+.filters button {
+  background-color: #00E676;
+  color: #004D40;
+  border: none;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: #004D40;
+  color: white;
+}
+
+thead th {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #004D40;
+}
+
+tbody td {
+  padding: 10px;
+  text-align: left;
+}
+
+tbody tr:hover {
+  background-color: #004D40;
+}
+
+.processing {
+  color: #FFD600;
+}
+
+.complete {
+  color: #00E676;
+}
+
+.cancel {
+  color: #FF3D00;
+}
+
+.invoice-button {
+  padding: 5px 10px;
+  background-color: #00E676;
+  color: #004D40;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.invoice-button i {
+  margin-left: 5px;
+  font-size: 14px;
+}
