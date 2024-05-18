@@ -1,20 +1,39 @@
-import React from 'react';
-import './Profile.css'; // Assume we have a CSS file for styling
+import React , {useState, useEffect} from 'react';
+import './Profile.css'; 
+import api from '../../api/api.js'
+import defaultImage from "../../assets/images/defaultProfile.jpg"
+
 
 const Profile = () => {
+
+  const [profileData, setProfileData] = useState({});
+
+  useEffect (() => {
+    const fetch = async () => {
+      try {
+        const response = await api.get('/users/dashboard');
+        console.log(response.data)
+        setProfileData(response.data);
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+      }
+    }
+    fetch();
+  },[])
+
   return (
     <div className="profile">
       <h1>Profile</h1>
       <p className="breadcrumb">Profile</p>
       <div className="profile-card">
         <div className="profile-info">
-          <img src="path/to/profile-image.jpg" alt="Profile" className="profile-image" />
+          <img src={defaultImage} alt="Profile" className="profile-image" />
           <div className="profile-details">
-            <h2>SUNIL SHARMA</h2>
-            <p>Wallet: ₹ 2,758</p>
-            <p>Mobile Number: +919567838956</p>
-            <p>Vehicle Number: RJ 14 9354</p>
-            <p>RFID Card Number: 140414704</p>
+            <h2>{profileData.name}</h2>
+            <p>Wallet: ₹ {profileData.totalBalance}</p>
+            <p>Mobile Number: +91{profileData.mobileNumber}</p>
+            <p>Vehicle Number: {profileData.vehicleNumber}</p>
+            <p>RFID Card Number: {profileData.rfid}</p>
           </div>
         </div>
         <button className="update-button">Update Profile</button>
