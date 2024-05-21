@@ -1,34 +1,58 @@
-import React, { useState } from 'react';
-import './BuyProducts.css'; // Ensure this path is correct
-// import productImage from 'path/to/product-image.png'; // Update this path accordingly
+import React, { useState, useEffect } from 'react';
+import './BuyProducts.css';
+import api from '../../api/api.js';
+import defaultImage from "../../assets/images/defaultProfile.jpg"
 
 const BuyProducts = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [date, setDate] = useState('');
   const [status, setStatus] = useState('All');
+  const [buyProducts, setBuyProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
 
-  const products = [
-    { id: 1, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' },
-    { id: 2, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' },
-    { id: 3, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' },
-    { id: 4, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' },
-    { id: 5, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' },
-    { id: 6, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' },
-    { id: 7, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' },
-    { id: 8, name: 'PowerPulse 30', productId: 345, date: '07 Aug 2022', price: 2000, status: 'Available' }
-  ];
+
+  useEffect(() => {
+    const fetchBookings = async () => {
+      try {
+        const response = await api.get('/charger/dashboard/buyproduct');
+        console.log(response.data);
+        setBuyProducts(response.data); 
+        setFilteredProducts(response.data); 
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+      }
+    };
+    fetchBookings();
+  }, []);
 
   const handleSearchChange = (e) => setSearchTerm(e.target.value);
   const handleDateChange = (e) => setDate(e.target.value);
   const handleStatusChange = (e) => setStatus(e.target.value);
 
-  const filteredProducts = products.filter(product => {
-    return (
-      product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
-      (date === '' || product.date.includes(date)) &&
-      (status === 'All' || product.status === status)
-    );
-  });
+  // const filteredProducts = products.filter(product => {
+  //   return (
+  //     product.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+  //     (date === '' || product.date.includes(date)) &&
+  //     (status === 'All' || product.status === status)
+  //   );
+  // });
+
+  const filterProducts = () => {
+    const result = buyProducts.filter((product) => {
+      const matchesSearchTerm = 
+      product.station?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.address?.toLowerCase().includes(searchTerm.toLowerCase());
+
+      const matchesDate = date === '' || product.date.includes(date);
+      const matchesStatus = status === 'All' || product.status === status;
+
+      console.log(`Booking ID: ${product.productId}, Matches Search: ${matchesSearchTerm}, Matches Date: ${matchesDate}, Matches Status: ${matchesStatus}`);
+
+      return matchesSearchTerm && matchesDate && matchesStatus;
+    });
+
+    setFilteredProducts(result);
+  };
 
   return (
     <div className="buy-products">
@@ -54,7 +78,7 @@ const BuyProducts = () => {
           <option value="Available">Available</option>
           <option value="Sold Out">Sold Out</option>
         </select>
-        <button className="submit-button">Submit</button>
+        <button className="submit-button" onClick={filterProducts}>Submit</button>
       </div>
       <table>
         <thead>
@@ -73,9 +97,7 @@ const BuyProducts = () => {
           {filteredProducts.map((product, index) => (
             <tr key={product.id}>
               <td>{index + 1}</td>
-              {/* <td>
-                <img src={productImage} alt="Product" className="product-image" />
-              </td> */}
+              {<img src={defaultImage} alt="Profile" className="profile-image" />}
               <td>{product.name}</td>
               <td>{product.productId}</td>
               <td>{product.date}</td>

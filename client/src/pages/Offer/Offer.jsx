@@ -1,13 +1,23 @@
-import React from 'react';
-import './Offer.css'; // Ensure this path is correct
+import React, { useState, useEffect } from 'react';
+import api from '../../api/api.js';
+import './Offer.css'; 
 
 const Offer = () => {
-  const offers = [
-    { id: 1, title: '20 % OFF up to ₹500', description: 'Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Est quod tempore neque aut, voluptatibus, dolorem eum...', code: 'XPJTJ8247' },
-    { id: 2, title: '20 % OFF up to ₹500', description: 'Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Est quod tempore neque aut, voluptatibus, dolorem eum...', code: 'XPJTJ8247' },
-    { id: 3, title: '20 % OFF up to ₹500', description: 'Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Est quod tempore neque aut, voluptatibus, dolorem eum...', code: 'XPJTJ8247' },
-    { id: 4, title: '20 % OFF up to ₹500', description: 'Lorem ipsum, dolor sit, amet consectetur adipisicing elit. Est quod tempore neque aut, voluptatibus, dolorem eum...', code: 'XPJTJ8247' }
-  ];
+
+  const [offers, setOffers] = useState([]);
+
+  useEffect(() => {
+    const fetchOffers = async () => {
+      try {
+        const response = await api.get('/charger/dashboard/myoffer');
+        console.log(response.data);
+        setOffers(response.data);
+      } catch (error) {
+        console.error('Error fetching data: ', error);
+      }
+    };
+    fetchOffers();
+  }, []);
 
   const copyToClipboard = (code) => {
     navigator.clipboard.writeText(code);
@@ -21,7 +31,7 @@ const Offer = () => {
       <div className="offer-list">
         {offers.map((offer) => (
           <div className="offer-card" key={offer.id}>
-            <h2>{offer.title}</h2>
+            <h2>{offer.offerName}</h2>
             <p>{offer.description} <span className="read-more">Read more</span></p>
             <div className="offer-code">
               <span>{offer.code}</span>
