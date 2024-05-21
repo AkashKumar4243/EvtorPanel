@@ -23,7 +23,7 @@ router.get('/dashboard/rfid',async (req,res) => {
 
 router.put('/dashboard/rfid/blockcard',async (req,res) => {
     try {
-        const {name , mobileNumber} = req.body;
+        const {name, mobileNumber} = req.body;
 
         console.log(mobileNumber);
 
@@ -51,30 +51,25 @@ router.post('/dashboard/rfid/addcard', async(req,res) => {
         const data = req.body;
         console.log(data)
         const rfidCardData = {
-            name,
-            vehicleNumber,
-            mobileNumber,
-            rfidNumber
+            name : data.name,
+            vehicleNumber : data.vehicleNumber,
+            mobileNumber : data.mobileNumber,
+            rfidNumber : data.rfidNumber
         }
 
-        const newRfidCardData = await RFID.insertOne(rfidCardData, function(err,result) {
-            if(err) {
-                console.log("Add Card Failed" ,err);
-            } else {
-                console.log("RFID card added successfully")
-            }
-        });
+        const newRfidCardData = await RFID.create(rfidCardData);
 
         res.status(200).send(newRfidCardData);
         console.log(newRfidCardData);
 
     } catch (error) {
+        console.log(error)
         res.status(400).send("connection failed ");
     }
 })
 
 router.post('/dashboard/rfid/addcard/verify', (req,res) => {
-    res.send("dashboard/addcard/verify");
+    res.send("dashboard/addcard/verify"); 
 })
 
 export default router;

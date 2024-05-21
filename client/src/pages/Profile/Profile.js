@@ -11,7 +11,7 @@ const Profile = () => {
   useEffect (() => {
     const fetch = async () => {
       try {
-        const response = await api.get('/users/dashboard');
+        const response = await api.get('/users/dashboard/profile');
         console.log(response.data)
         setProfileData(response.data);
       } catch (error) {

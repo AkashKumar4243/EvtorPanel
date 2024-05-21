@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
+import api from '../../api/api.js'
 import './AddRfidCard.css'; 
 
 const AddRFIDCard = () => {
   const [formData, setFormData] = useState({
     name: '',
     vehicleNumber: '',
-    phoneNumber: '',
+    mobileNumber: '',
     rfidNumber: ''
   });
 
@@ -14,9 +15,21 @@ const AddRFIDCard = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
-    // Logic for sending OTP or submitting form
-    console.log(formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await api.post('/rfidcard/dashboard/rfid/addcard', formData); // Use the Axios instance for POST request
+      // setResponse(response.data);
+      console.log(response);
+    } catch (error) {
+      console.error('Error posting data: ', error);
+    }
+    setFormData({ 
+      name : "",
+      mobileNumber : '',
+      rfidNumber : "",
+      vehicleNumber : "",
+     });
   };
 
   return (
@@ -40,9 +53,9 @@ const AddRFIDCard = () => {
         />
         <input 
           type="text" 
-          name="phoneNumber" 
+          name="mobileNumber" 
           placeholder="Phone Number" 
-          value={formData.phoneNumber} 
+          value={formData.mobileNumber} 
           onChange={handleChange} 
         />
         <input 
