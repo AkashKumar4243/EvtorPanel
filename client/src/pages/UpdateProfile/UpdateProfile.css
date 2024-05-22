@@ -1,0 +1,43 @@
+.update-profile {
+    padding: 20px;
+    color: #FFFFFF;
+    background-color: #004D40; /* Dark green background */
+    min-height: 100vh;
+  }
+  
+  .update-profile h1 {
+    color: #00E676; /* Light green color for the title */
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: grid;
+    gap: 15px;
+    background-color: #00332B; /* Even darker green background */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 2px solid #00E676; /* Light green border */
+    background-color: #002522; /* Darker green background */
+    color: #FFFFFF;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #00E676; /* Light green background */
+    border: none;
+    border-radius: 5px;
+    color: #00332B; /* Dark green text */
+    cursor: pointer;
+    font-size: 16px;
+  }

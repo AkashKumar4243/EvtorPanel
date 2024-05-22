@@ -1,10 +1,13 @@
 import React , {useState, useEffect} from 'react';
 import './Profile.css'; 
-import api from '../../api/api.js'
-import defaultImage from "../../assets/images/defaultProfile.jpg"
+import api from '../../api/api.js';
+import defaultImage from "../../assets/images/defaultProfile.jpg";
+import { useNavigate } from 'react-router-dom';
 
 
 const Profile = () => {
+
+  const navigate=useNavigate();
 
   const [profileData, setProfileData] = useState({});
 
@@ -36,7 +39,7 @@ const Profile = () => {
             <p>RFID Card Number: {profileData.rfid}</p>
           </div>
         </div>
-        <button className="update-button">Update Profile</button>
+        <button className="update-button" onClick={() => navigate('/update-profile')}>Update Profile</button>
       </div>
     </div>
   );

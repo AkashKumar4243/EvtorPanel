@@ -12,6 +12,7 @@ import Chargers from './pages/Chargers/Chargers.jsx';
 import Offer from './pages/Offer/Offer.jsx';
 import ContactUs from './pages/ContactUs/ContactUs.jsx';
 import './App.css';
+import UpdateProfile from './pages/UpdateProfile/UpdateProfile.jsx';
 
 
 const App = () => {
@@ -31,7 +32,8 @@ const App = () => {
             <Route path="/my-chargers" element={<Chargers />} /> 
             <Route path="/my-offer" element={<Offer />} />
             <Route path="/contact-us" element={<ContactUs />} /> 
-            {/* Add more routes as needed */}
+            <Route path="/update-profile" element={<UpdateProfile />} />
+          
           </Routes>
         </div>
       </div>
