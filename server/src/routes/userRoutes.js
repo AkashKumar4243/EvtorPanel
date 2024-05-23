@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.get('/dashboard', async (req,res) => { 
     try {
-        const user = await User.findOne({mobileNumber : "1234567890"});
+        const user = await User.findOne({mobileNumber : "9917744243"});
 
         if(!user){
             res.status(501).send("User not found ");
@@ -18,8 +18,8 @@ router.get('/dashboard', async (req,res) => {
             totalBooking : user.totalBooking,
             totalBuyProduct : user.totalBuyProduct
         }
-        console.log(data)
-        res.status(200).json(data)
+        // console.log(data)
+        res.status(200).send(data)
         
     } catch (error) {
         res.status(400).send("connection error :" , error)
@@ -28,7 +28,7 @@ router.get('/dashboard', async (req,res) => {
 
 router.get('/dashboard/wallet',async (req,res) => {
     try {
-        const user = await User.findOne({mobileNumber : "1234567890"});
+        const user = await User.findOne({mobileNumber : "9917744243"});
 
         if(!user){
             res.status(501).send("User not found ");
@@ -38,7 +38,7 @@ router.get('/dashboard/wallet',async (req,res) => {
             totalBalance : user.balance,
         }
         console.log(data)
-        res.status(200).json(data)
+        res.status(200).send(data)
         
     } catch (error) {
         res.status(400).send("connection error :" , error)
@@ -47,7 +47,7 @@ router.get('/dashboard/wallet',async (req,res) => {
 
 router.get('/dashboard/profile', async (req,res) => {
     try {
-        const user = await User.findOne({mobileNumber : "1234567890"});
+        const user = await User.findOne({mobileNumber : "9917744243"});
 
         if(!user){
             res.status(501).send("User not found ");
@@ -61,7 +61,7 @@ router.get('/dashboard/profile', async (req,res) => {
             vehicleNumber : user.vehicleNumber
         }
         console.log(data)
-        res.status(200).json(data)
+        res.status(200).send(data)
         
     } catch (error) {
         res.status(400).send("connection error :" , error)

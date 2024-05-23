@@ -1,0 +1,96 @@
+/* .offer {
+    padding: 20px;
+    color: #FFFFFF;
+  }
+  
+  .offer h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00E676;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .offer-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .offer-card {
+    background-color: #004D40; 
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .offer-card h2 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #FFFFFF;
+  }
+  
+  .offer-card p {
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .read-more {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .offer-code {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .offer-code span {
+    background-color: #00E676;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    color: #004D40;
+  }
+  
+  .copy-button {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+   */
+   .offer-card.cards {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.offer-card.cards h3 {
+  font-family: Anton;
+  font-size: 28px;
+  font-weight: 400;
+  color: #68FFB0;
+}
+.offer-card.cards h3 span {
+  color: #FF2C2C;
+}
+.offer-card.cards p .rd-txt {
+  color: #FF2C2C;
+}
+.offer-card.cards p button{
+  background-color: transparent;
+}
+.offer-card.cards p button i {
+  color: rgb(255 255 255 / 60%);
+}

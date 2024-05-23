@@ -1,0 +1,101 @@
+/* .buy-products {
+    padding: 20px;
+    color: #FFFFFF;
+  }
+  
+  .buy-products h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #00E676; 
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .filters input[type="text"], 
+  .filters input[type="date"], 
+  .filters select, 
+  .filters button {
+    padding: 10px;
+    border: 1px solid #004D40; 
+    border-radius: 5px;
+    background-color: #004D40; 
+    color: #FFFFFF; 
+  }
+  
+  .filters button {
+    background-color: #00E676;
+    color: #004D40; 
+    border: none;
+    cursor: pointer;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #004D40; 
+    color: white;
+  }
+  
+  thead th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody tr {
+    border-bottom: 1px solid #004D40; 
+  }
+  
+  tbody td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  tbody tr:hover {
+    background-color: #004D40;
+  }
+  
+  .product-image {
+    width: 50px;
+    height: auto;
+  }
+  
+  .details-button, .invoice-button {
+    padding: 5px 10px;
+    background-color: #00E676; 
+    color: #004D40; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .details-button i, .invoice-button i {
+    margin-left: 5px;
+    font-size: 14px;
+  }
+   */
+   
+   .prdct-img {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: #0A8989;
+    border-radius: 10px;
+}
+.dwn-btn {
+  background-color: #004C4C;
+}

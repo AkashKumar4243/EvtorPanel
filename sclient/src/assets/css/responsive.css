@@ -1,0 +1,465 @@
+@media (max-width:1200px) {
+	.main-sec {
+		margin-left: 0px;
+	}
+
+	.dash-menu {
+		left: -297px;
+	}
+
+	.header {
+		width: calc(100% - 0px);
+		margin-left: 0px;
+	}
+
+	body.resize-menu .dash-menu {
+		left: 0px;
+	}
+
+	.dash-menu .dashbord-logo .cross-icon {
+		display: block;
+	}
+
+}
+
+@media (max-width:991px) {
+	.dash-menu .nav-menu .nav-item .nav-link {
+		font-size: 14px;
+	}
+
+	.header {
+		padding: 10px;
+	}
+
+	.dash-menu .dashbord-logo img {
+		width: 90px;
+	}
+
+	.main-sec {
+		margin-top: 100px;
+		padding: 0px 20px;
+	}
+
+	.dashboard-title {
+		font-size: 25px;
+	}
+
+	.profile-card-innr-img img {
+		height: 60px;
+		width: 60px;
+		border: 1px solid #68FFB0;
+	}
+
+	.profile-card-innr-cntnt h2 {
+		font-size: 20px;
+	}
+
+	.profile-card-innr-cntnt p {
+		font-size: 15px;
+	}
+
+	.thm-btn {
+		padding: 8px 20px;
+		font-size: 16px;
+	}
+
+	.wallet-card form .form-control {
+		margin-bottom: 10px;
+	}
+
+	.wallet-balance h5 {
+		font-size: 20px;
+	}
+
+	.wallet-balance h5 i {
+		font-size: 20px;
+	}
+
+	.wallet-balance h3 {
+		font-size: 20px;
+	}
+
+	.card-number {
+		margin-top: 1rem;
+	}
+
+	.card-number h4 {
+		font-size: 24px;
+	}
+
+	.card-number p {
+		font-size: 15px;
+		margin-bottom: 0.5rem;
+	}
+
+	.cards {
+		padding: 1.5rem;
+	}
+
+	.invc-btn, .dwn-btn {
+		padding: 5px 7px;
+		font-size: 13px;
+	}
+
+	.booking-table table tr td {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	.profile-frm-bx.mb-5 {
+		margin-bottom: 1rem !important;
+	}
+
+	.profile-frm-bx .form-control, .profile-frm-bx .form-select {
+		font-size: 15px;
+		height: 50px;
+	}
+
+	.dash-menu .nav-menu .logout a {
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		font-size: 15px;
+	}
+
+	.dashboard-card {
+		flex-direction: column;
+		text-align: center;
+		padding: 1.5rem 0;
+	}
+
+	.dashboard-content h3 {
+		margin: 0;
+		font-size: 22px;
+	}
+
+	.dashboard-content h5 {
+		font-size: 15px;
+		margin: 0.8rem 0;
+	}
+
+	.dashboard-icon span {
+		height: 45px;
+		width: 45px;
+		line-height: 45px;
+		font-size: 16px;
+	}
+
+	.header-right ul .nav-link img {
+		height: 35px;
+		width: 35px;
+		border: 1px solid #fff;
+	}
+
+	.dash-menu .dashbord-logo {
+		padding: 17.5px 50px;
+		margin-bottom: 1.6rem;
+		border-bottom: 0.5px solid rgb(255 255 255 / 20%);
+	}
+
+	.dash-menu .dashbord-logo .cross-icon {
+		width: 40px;
+		height: 40px;
+		line-height: 40px;
+		font-size: 15px;
+	}
+
+	.dash-menu {
+		padding-top: 0;
+	}
+
+	.cards.profile-card, .cards.profile-card .text-end {
+		text-align: center !important;
+	}
+
+	.profile-txt {
+		margin: 1rem 0;
+		flex-direction: column;
+	}
+
+	.profile-txt span {
+		margin-bottom: 0.2rem;
+	}
+
+	.document-view img {
+		height: 120px;
+	}
+
+	.document-view .document-view-cntnt h4 span {
+		font-size: 16px;
+	}
+
+	.document-view .document-view-cntnt h4 a {
+		height: 30px;
+		width: 30px;
+		line-height: 30px;
+		font-size: 10px;
+	}
+
+	.document-fltr h4 {
+		font-size: 18px;
+	}
+
+	.img-60 {
+		height: 40px;
+		width: 40px;
+		border-radius: 25px;
+	}
+
+	.charger-card-content {
+		margin-top: 0.8rem;
+		padding: 10px;
+	}
+
+	.charger-card-content .charger-card-content-switch {
+		align-items: center;
+	}
+
+	.charger-card-content h4 {
+		font-size: 15px;
+	}
+
+	.charger-card-content .charger-card-content-switch .form-check-input {
+		width: 50px;
+		height: 20px;
+	}
+
+	.rfid-tabs .nav .nav-item .nav-link {
+		font-size: 14px;
+		padding: 10px 0;
+	}
+
+	td.cstm-wdth {
+		width: 200px;
+	}
+
+	.booking-table table tr td {
+		font-size: 13px;
+	}
+
+	.booking-table table thead th {
+		font-size: 13px;
+		font-weight: 500;
+	}
+
+	.bank-acc {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.bank-acc .bank-acc-img {
+		margin-bottom: 10px;
+	}
+
+	.profile-frm-bx {
+		margin-bottom: 10px;
+	}
+
+	.profile-frm-bx .thm-btn {
+		width: 100%;
+	}
+
+	.booking-table table tr td br {
+		display: none;
+	}
+
+	.contact-map-dtl-innr p {
+		font-size: 16px;
+	}
+
+	.contact-map-dtl-innr h5 {
+		font-size: 20px;
+	}
+
+	.contact-map-dtl.cards {
+		padding: 10px;
+	}
+
+	.contact-frm textarea.form-control {
+		height: 150px;
+	}
+
+	.contact-frm .form-control {
+		height: 50px;
+		font-size: 16px;
+	}
+
+	.contact-map iframe {
+		height: 330px;
+	}
+
+	#success .modal-content .modal-body h4 {
+		font-size: 20px;
+	}
+
+	#success .modal-content .modal-body img {
+		width: 60px;
+		margin: 1rem 0;
+	}
+
+	#success .modal-content .modal-body h3 {
+		font-size: 25px;
+	}
+
+	#success .modal-content .modal-body p {
+		font-size: 15px;
+		margin-bottom: 1rem;
+	}
+
+	#success .modal-content .btn-close {
+		height: 30px;
+		width: 30px;
+		line-height: 30px;
+		font-size: 12px;
+	}
+
+	.custom-modal form .form-control {
+		height: 40px;
+		font-size: 15px;
+	}
+
+	.custom-modal .modal-body .dashboard-title {
+		font-size: 35px;
+		margin-bottom: 1rem;
+	}
+
+	.charger-card.cards {
+		padding: 0;
+		border-radius: 8px 8px 0 0;
+	}
+
+	.charger-card-img img {
+		height: 170px;
+		border-radius: 8px 8px 0 0;
+	}
+
+	.custom-modal form textarea.form-control {
+		height: 100px;
+	}
+
+}
+
+@media screen and (max-width:767px) {
+	.dashboard-card {
+		display: block;
+		text-align: center;
+	}
+
+	.dashboard-icon span {
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		font-size: 15px;
+		margin-bottom: 0.5rem;
+	}
+
+	.dashboard-content h5 {
+		font-size: 13px;
+	}
+
+	.dashboard-content h3 {
+		font-size: 18px;
+	}
+
+	.cards.profile-card .text-end {
+		text-align: center !important;
+	}
+
+	.profile-card-innr {
+		justify-content: center;
+		margin-bottom: 1rem;
+		flex-direction: column;
+	}
+
+	.profile-txt {
+		justify-content: center;
+	}
+
+	.dashboard-title {
+		font-size: 25px;
+	}
+
+	.dash-menu .dashbord-logo .cross-icon {
+		width: 35px;
+		height: 35px;
+		line-height: 35px;
+		font-size: 15px;
+	}
+
+	.profile-card-innr-cntnt h2 {
+		font-size: 18px;
+		margin: 0.5rem 0;
+	}
+
+	.contact-map iframe {
+		height: 310px;
+	}
+
+	.contact-frm textarea.form-control {
+		height: 140px;
+	}
+
+	.card-number {
+		margin-top: 0rem;
+	}
+
+	.profile-btn {
+		flex-direction: column;
+	}
+
+	.profile-btn  .thm-btn {
+		width: 100%;
+		margin-top: 5px;
+	}
+
+}
+
+@media (max-width:575px) {
+	.main-sec {
+		margin-top: 80px;
+		padding: 0px 15px;
+	}
+
+	.dash-menu {
+		width: 100%;
+		margin-left: 0;
+		left: -575px;
+	}
+
+	.document-bx {
+		margin-bottom: 1rem;
+	}
+
+	.main-sec .d-flex.justify-content-between {
+		flex-direction: column;
+	}
+
+	.main-sec .d-flex.justify-content-between .dashboard-title {
+		margin-top: 10px;
+	}
+
+	.custom-modal .modal-body .dashboard-title {
+		font-size: 40px;
+		margin-bottom: 1rem;
+	}
+
+	.main-sec .d-flex.justify-content-between .thm-btn {
+		text-align: center;
+	}
+
+	.custom-modal form .form-control {
+		height: 45px;
+		font-size: 15px;
+	}
+
+	.profile-frm-bx label {
+		font-size: 16px;
+	}
+
+	.profile-frm-bx span {
+		top: 52px;
+		right: 10px;
+		font-size: 15px;
+	}
+
+}

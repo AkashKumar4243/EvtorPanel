@@ -1,0 +1,120 @@
+/* .wallet {
+    padding: 20px;
+  }
+  
+  .wallet h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .wallet-balance {
+    background-color: #00695c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .wallet-balance span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .recharge {
+    display: flex;
+    align-items: center;
+  }
+  
+  .recharge input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+  
+  .recharge button {
+    padding: 10px 20px;
+    background-color: #012e26;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   */
+   .wallet-balance h5 {
+    font-size: 25px;
+    color: #fff;
+}
+.wallet-balance h5 i {
+  color: #68FFB0;
+  font-size: 28px;
+}
+.wallet-balance h3 {
+  padding-left: 40px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #6AFF9A;
+  margin-bottom: 1.5rem;
+}
+.wallet-card .form-control {
+  border: 2px solid #fff!important;
+  height: 55px;
+  background-color: #002D2D!important;
+  color: #fff!important;
+}
+.wallet-card .form-control:focus{
+  border-color: #fff!important;
+}
+#success .modal-content .modal-body {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+#success .modal-content {
+  background-color: #004C4C;
+  border-radius: 20px;
+}
+#success .modal-content .modal-body h4 {
+  font-family: Anton;
+  font-size: 45px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+}
+#success .modal-content .modal-body img {
+  width: 107px;
+  margin: 2rem 0;
+}
+#success .modal-content .modal-body h3 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #68FFB0;
+}
+#success .modal-content .modal-body p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+#success .modal-content .btn-close {
+  background-color: #6AFF9A;
+  opacity: 1;
+  box-shadow: none !important;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 25px;
+  z-index: 999;
+}
