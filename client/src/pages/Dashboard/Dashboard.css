@@ -1,30 +1,36 @@
- .dashboard {
-    flex-grow: 1;
-    padding: 20px;
-  }
-  
-  .dashboard h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .stats {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .stat {
-    background-color: #00695c;
-    color: white;
-    padding: 20px;
+ 
+  .dashboard-card {
+    background-color: #002D2D;
+    padding: 1.5rem;
     border-radius: 10px;
-    text-align: center;
-    width: 150px;
-  }
-  
-  .stat span {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 14px;
-  }
-  
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+.dashboard-icon span {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #004C4C;
+  color: #68FFB0;
+  border-radius: 50px;
+  font-size: 25px;
+}
+.dashboard-content h5 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+
+}
+.dashboard-content h3 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #6AFF9A;
+}
+.dashboard-content {
+  margin-left: 15px;
+}

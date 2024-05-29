@@ -10,7 +10,9 @@ import addofferData from "./addData/offerData.js";
 import addproductData from "./addData/productData.js";
 import addRfidData from "./addData/rfidData.js";
 import cors from "cors"
+import dotenv from "dotenv"
 
+dotenv.config();
 const app = express();
 const PORT = 3000;
 

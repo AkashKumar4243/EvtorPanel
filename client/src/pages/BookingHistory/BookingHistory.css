@@ -1,4 +1,4 @@
-.booking-history {
+/* .booking-history {
   padding: 20px;
   color: #FFFFFF;
 }
@@ -93,4 +93,16 @@ tbody tr:hover {
 .invoice-button i {
   margin-left: 5px;
   font-size: 14px;
+} */
+
+.processing {
+  color: #FFD600!important;
+}
+
+.complete {
+  color: #00E676!important;
+}
+
+.cancel {
+  color: #FF3D00!important;
 }

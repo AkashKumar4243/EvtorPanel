@@ -1,4 +1,4 @@
-
+import jwt from "jsonwebtoken"
 import express, { json } from "express";
 import User from "../model/User.js";
 
@@ -19,7 +19,17 @@ router.get('/dashboard', async (req,res) => {
             totalBuyProduct : user.totalBuyProduct
         }
         // console.log(data)
-        res.status(200).send(data)
+        const token = jwt.sign({
+            rfid : user.rfidCardNumber
+         },
+         process.env.MYJWTTOKEN,
+         {
+            expiresIn : "7h"
+         });
+        res.status(200).json({
+            data,
+            token
+        })
         
     } catch (error) {
         res.status(400).send("connection error :" , error)
@@ -36,9 +46,12 @@ router.get('/dashboard/wallet',async (req,res) => {
 
         const data = {
             totalBalance : user.balance,
+            rfid : user. rfidCardNumber
         }
         console.log(data)
-        res.status(200).send(data)
+
+        
+        res.status(200).json(data)
         
     } catch (error) {
         res.status(400).send("connection error :" , error)
@@ -76,6 +89,17 @@ router.put('/dashboard/profile/update',async (req,res) => {
         const user = await User.updateOne({mobileNumber:id},{$set : newData})
 
         console.log(user)
+        res.status(200).send(user)
+    } catch (error) {
+        res.status(400).send("connection error :" , error)
+    }
+})
+
+router.post('/dashboard/profile/updatebalance',async (req,res) => {
+    try {
+        const data = req.body;
+        console.log(data)
+        const user = await User.updateOne({rfidCardNumber:data.rfidCardNumber},{$set : data})
         res.status(200).send(user)
     } catch (error) {
         res.status(400).send("connection error :" , error)

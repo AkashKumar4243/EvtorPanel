@@ -1,125 +1,120 @@
-.wallet {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #0f3937;
-  color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* .wallet {
+    padding: 20px;
+  }
+  
+  .wallet h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .breadcrumb {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 20px;
+  }
+  
+  .wallet-balance {
+    background-color: #00695c;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .wallet-balance span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .recharge {
+    display: flex;
+    align-items: center;
+  }
+  
+  .recharge input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    flex-grow: 1;
+  }
+  
+  .recharge button {
+    padding: 10px 20px;
+    background-color: #012e26;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+   */
+   .wallet-balance h5 {
+    font-size: 25px;
+    color: #fff;
 }
-
-.wallet h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
+.wallet-balance h5 i {
+  color: #68FFB0;
+  font-size: 28px;
 }
-
-.breadcrumb {
-  font-size: 1em;
-  margin-bottom: 20px;
-  color: #8bbeb4;
+.wallet-balance h3 {
+  padding-left: 40px;
+  font-size: 40px;
+  font-weight: 600;
+  color: #6AFF9A;
+  margin-bottom: 1.5rem;
 }
-
-.wallet-balance {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: #1b5653;
-  border-radius: 5px;
-  margin-bottom: 20px;
+.wallet-card .form-control {
+  border: 2px solid #fff!important;
+  height: 55px;
+  background-color: #002D2D!important;
+  color: #fff!important;
 }
-
-.wallet-balance span {
-  font-size: 1.2em;
+.wallet-card .form-control:focus{
+  border-color: #fff!important;
 }
-
-.wallet-balance strong {
-  font-size: 1.5em;
-}
-
-.recharge {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.recharge input {
-  width: calc(100% - 120px);
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-right: 10px;
-  box-sizing: border-box;
-}
-
-.recharge button {
-  padding: 10px 20px;
-  background-color: #1aaf5d;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
-}
-
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.popup-inner {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  width: 100%;
-  position: relative;
+#success .modal-content .modal-body {
   text-align: center;
-  color: black;
+  padding: 3rem 2rem;
 }
-
-.popup-inner h2 {
-  margin-top: 0;
-  color: #0f3937;
+#success .modal-content {
+  background-color: #004C4C;
+  border-radius: 20px;
 }
-
-.success-icon {
-  font-size: 4em;
-  color: #1aaf5d;
-}
-
-.amount {
-  font-size: 2em;
-  margin: 10px 0;
-}
-
-.popup-button {
-  display: inline-block;
-  width: 100%;
-  padding: 10px;
-  background-color: #1aaf5d;
+#success .modal-content .modal-body h4 {
+  font-family: Anton;
+  font-size: 45px;
+  font-weight: 400;
   color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 1em;
+  text-transform: uppercase;
 }
-
-.close-button {
+#success .modal-content .modal-body img {
+  width: 107px;
+  margin: 2rem 0;
+}
+#success .modal-content .modal-body h3 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #68FFB0;
+}
+#success .modal-content .modal-body p {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.5rem;
+}
+#success .modal-content .btn-close {
+  background-color: #6AFF9A;
+  opacity: 1;
+  box-shadow: none !important;
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  cursor: pointer;
-  color: #c0392b;
+  right: 0;
+  top: 0;
+  height: 35px;
+  width: 35px;
+  line-height: 35px;
+  text-align: center;
+  border-radius: 25px;
+  z-index: 999;
 }

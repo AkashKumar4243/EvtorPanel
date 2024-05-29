@@ -1,4 +1,4 @@
-.offer {
+/* .offer {
     padding: 20px;
     color: #FFFFFF;
   }
@@ -6,7 +6,7 @@
   .offer h1 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #00E676; /* Green color for the title */
+    color: #00E676;
   }
   
   .breadcrumb {
@@ -22,7 +22,7 @@
   }
   
   .offer-card {
-    background-color: #004D40; /* Dark green background */
+    background-color: #004D40; 
     border-radius: 10px;
     padding: 15px;
     display: flex;
@@ -71,4 +71,26 @@
     cursor: pointer;
     margin-left: 10px;
   }
-  
+   */
+   .offer-card.cards {
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.offer-card.cards h3 {
+  font-family: Anton;
+  font-size: 28px;
+  font-weight: 400;
+  color: #68FFB0;
+}
+.offer-card.cards h3 span {
+  color: #FF2C2C;
+}
+.offer-card.cards p .rd-txt {
+  color: #FF2C2C;
+}
+.offer-card.cards p button{
+  background-color: transparent;
+}
+.offer-card.cards p button i {
+  color: rgb(255 255 255 / 60%);
+}
