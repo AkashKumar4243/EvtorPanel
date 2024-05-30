@@ -30,7 +30,7 @@ router.put('/dashboard/rfid/blockcard',async (req,res) => {
         // if card is already block then handle it too by checking the status first . if card status is active then it is allowed to block but if it is already block then show that it is already blocked.
 
         const blockedCard = await RFID.updateOne({mobileNumber},{
-            status : "inactive"
+            status : false
         });
 
         if(!blockedCard.modifiedCount) {

@@ -104,7 +104,7 @@ const UpdateProfile = () => {
                                 <div className="profile-frm-bx mb-4">
                                     <label className='form-label'>User Name</label>
                                     <input type="text" className="form-control" name="name"
-                                    placeholder="Enter mobile name"
+                                    placeholder="Enter name"
                                         value={profile.name}
                                         onChange={handleChange} />
                                     <span className="far fa-pen" />

@@ -9,8 +9,8 @@ const rfidSchema = new mongoose.Schema({
     rfidNumber: String,
     mobileNumber: String,
     status: {
-        type : String,
-        default : "active"
+        type : Boolean,
+        default : true
     },
     vehicleNumber: String
 });
