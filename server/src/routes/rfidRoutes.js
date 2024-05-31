@@ -2,6 +2,7 @@ import express from "express";
 import RFID from "../model/Rfid.js";
 
 const router = express.Router();
+import jwt from "jsonwebtoken"
 
 
 router.get('/dashboard/rfid',async (req,res) => {

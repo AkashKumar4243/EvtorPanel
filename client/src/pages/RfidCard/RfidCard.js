@@ -13,6 +13,7 @@ const RFIDCard = () => {
     mobileNumber: ''
 });
 
+
   const [rfids, setRfid] = useState([]);
 
   useEffect(() => {
@@ -49,6 +50,17 @@ const RFIDCard = () => {
       window.location.reload();
 };
 
+const handleAddCard = async (e) => {
+  e.preventDefault();
+  try { 
+      const response = await api.put('/rfidcard/dashboard/rfid/blockcard', data);
+      // setResponse(response.data);
+      console.log(response);
+    } catch (error) {
+      console.error('Error posting data: ', error);
+    }
+    window.location.reload();
+};
   return (
     <>
       {/* <h1>RFID Card</h1>
@@ -156,10 +168,10 @@ const RFIDCard = () => {
                 <h4 className="dashboard-title text-center">Request new card</h4>
                 <form action="">
                   <div className="mb-3">
-                    <input type="text" className="form-control" placeholder="Enter Name" />
+                    <input type="text" className="form-control" placeholder="Enter Name"  name="name" value={data.name} onChange={handleChange} />
                   </div>
                   <div className="mb-5">
-                    <input type="number" className="form-control" placeholder="Enter Mobile Number" />
+                    <input type="number" className="form-control" placeholder="Enter Mobile Number" name="mobileNumber" value={data.mobileNumber} onChange={handleChange}/>
                   </div>
                   <div>
                     <button type="button" className="thm-btn w-100">Request send</button>
