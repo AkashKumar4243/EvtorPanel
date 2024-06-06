@@ -1,62 +1,47 @@
-import React, { useState, useEffect } from 'react';
-import api from '../../api/api.js';
+import React, { useState } from 'react';
 import './BookingHistory.css'; // Ensure this path is correct
 import { Link } from 'react-router-dom';
-
+import jsPDF from 'jspdf';
 const BookingHistory = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [date, setDate] = useState('');
   const [status, setStatus] = useState('All');
-  const [bookings, setBookings] = useState([]);
-  const [filteredBookings, setFilteredBookings] = useState([]);
-
-  // const bookings = [
-  //   { id: 1, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 345, date: '07 Aug 2023', rupees: 86, status: 'Processing' },
-  //   { id: 2, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 545, date: '08 Aug 2023', rupees: 95, status: 'Cancel' },
-  //   { id: 3, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 345, date: '09 Aug 2023', rupees: 10, status: 'Complete' },
-  //   { id: 4, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 345, date: '07 Aug 2023', rupees: 200, status: 'Processing' },
-  //   { id: 5, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 545, date: '08 Aug 2023', rupees: 500, status: 'Cancel' }
-  // ];
-
-  useEffect(() => {
-    const fetchBookingsHistory = async () => {
-      try {
-        const response = await api.get('/charger/dashboard/bookinghistory');
-        console.log(response.data);
-        setBookings(response.data);
-        setFilteredBookings(response.data); 
-      } catch (error) {
-        console.error('Error fetching data: ', error);
-      }
-    };
-    fetchBookingsHistory();
-
-  }, []);
+  const bookings = [
+    { id: 1, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 345, date: '07 Aug 2023', rupees: 86, status: 'Processing' },
+    { id: 2, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 545, date: '08 Aug 2023', rupees: 95, status: 'Cancel' },
+    { id: 3, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 345, date: '09 Aug 2023', rupees: 10, status: 'Complete' },
+    { id: 4, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 345, date: '07 Aug 2023', rupees: 200, status: 'Processing' },
+    { id: 5, station: 'Advant Dc Charging Station', address: 'Raja Park, Jaipur', bookingId: 545, date: '08 Aug 2023', rupees: 500, status: 'Cancel' }
+  ];
+  const downloadInvoice = (booking) => {
+    const doc = new jsPDF();
+    doc.text(20, 20, `Booking ID: ${booking.bookingId}`);
+    doc.text(20, 30, `Charging Station: ${booking.station}`);
+    doc.text(20, 40, `Address: ${booking.address}`);
+    doc.text(20, 50, `Date: ${booking.date}`);
+    doc.text(20, 60, `Amount: ₹${booking.rupees.toFixed(2)}`);
+    doc.text(20, 70, `Status: ${booking.status}`);
+    doc.save(`Invoice_${booking.bookingId}.pdf`);
+  };
 
 
+
+
+
+
+  
   const handleSearchChange = (e) => setSearchTerm(e.target.value);
   const handleDateChange = (e) => setDate(e.target.value);
   const handleStatusChange = (e) => setStatus(e.target.value);
-
-  const filterBookings = () => {
-    const result = bookings.filter((booking) => {
-      const matchesSearchTerm = 
-        booking.station?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        booking.address?.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const matchesDate = date === '' || booking.date.includes(date);
-      const matchesStatus = status === 'All' || booking.status === status;
-
-      console.log(`Booking ID: ${booking.bookingId}, Matches Search: ${matchesSearchTerm}, Matches Date: ${matchesDate}, Matches Status: ${matchesStatus}`);
-
-      return matchesSearchTerm && matchesDate && matchesStatus;
-    });
-
-    setFilteredBookings(result);
-  };
-
+  const filteredBookings = bookings.filter(booking => {
+    return (
+      (booking.station.toLowerCase().includes(searchTerm.toLowerCase()) || booking.address.toLowerCase().includes(searchTerm.toLowerCase())) &&
+      (date === '' || booking.date.includes(date)) &&
+      (status === 'All' || booking.status === status)
+    );
+  });
   return (
-    <>          
+    <>
       <section className='main-sec'>
         <div className='row'>
           <div className='col-lg-12'>
@@ -76,23 +61,23 @@ const BookingHistory = () => {
             <div className='cards'>
             <div className="filters row">
           <div className='col-lg-3 profile-frm-bx'>
-          <input 
-          type="text" 
-          placeholder="Search" 
-          value={searchTerm} 
-          onChange={handleSearchChange} 
+          <input
+          type="text"
+          placeholder="Search"
+          value={searchTerm}
+          onChange={handleSearchChange}
         className='form-control'/>
           </div>
         <div className='col-lg-3 profile-frm-bx'>
-        <input 
-          type="date" 
-          value={date} 
-          onChange={handleDateChange} 
+        <input
+          type="date"
+          value={date}
+          onChange={handleDateChange}
         className='form-control'/>
         </div>
         <div className='col-lg-3 profile-frm-bx'>
-        <select 
-          value={status} 
+        <select
+          value={status}
           onChange={handleStatusChange}
         className='form-select'>
           <option value="All">All</option>
@@ -102,7 +87,7 @@ const BookingHistory = () => {
         </select>
         </div>
         <div className='col-lg-3'>
-        <button className="thm-btn w-100" onClick={filterBookings} >Submit</button>
+        <button className="thm-btn w-100">Submit</button>
         </div>
       </div>
       <div className='table table-responsive cstm-table'>
@@ -123,14 +108,14 @@ const BookingHistory = () => {
           {filteredBookings.map((booking, index) => (
             <tr key={booking.id}>
               <td>{index + 1}</td>
-              <td>{booking.chargingStation}</td>
-              <td>{booking.chargingStationAddress}</td>
+              <td>{booking.station}</td>
+              <td>{booking.address}</td>
               <td>{booking.bookingId}</td>
               <td>{booking.date}</td>
               <td>₹ {booking.rupees.toFixed(2)}</td>
               <td className={booking.status.toLowerCase()}>{booking.status}</td>
               <td>
-                <button className="invoice-button">
+              <button className="invoice-button" onClick={() => downloadInvoice(booking)}>
                   Invoice <i className="bi bi-download ms-2"></i>
                 </button>
               </td>
@@ -146,5 +131,4 @@ const BookingHistory = () => {
     </>
   );
 }
-
 export default BookingHistory;
